@@ -21,13 +21,14 @@ class MyApp extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          AnimateBottomImage(
+          AdaptiveAnimateBottomCity(
             heightDevice: size.height,
             widghtDevice: size.width,
             widghtImage: 1597,
             heightImage: 473,
             heightNeedImage: size.height * 0.6,
-            pathImage: 'assets/spb_bottom.png', secondAnimate: 10,
+            pathImage: 'assets/spb_bottom.png',
+            secondAnimate: 10,
           )
         ],
       ),
@@ -35,8 +36,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class AnimateBottomImage extends StatefulWidget {
-  const AnimateBottomImage({
+class AdaptiveAnimateBottomCity extends StatefulWidget {
+  const AdaptiveAnimateBottomCity({
     Key? key,
     required this.heightDevice,
     required this.widghtDevice,
@@ -54,10 +55,11 @@ class AnimateBottomImage extends StatefulWidget {
   final double heightNeedImage;
   final int secondAnimate;
   @override
-  State<AnimateBottomImage> createState() => _AnimateBottomImageState();
+  State<AdaptiveAnimateBottomCity> createState() =>
+      _AdaptiveAnimateBottomCityState();
 }
 
-class _AnimateBottomImageState extends State<AnimateBottomImage>
+class _AdaptiveAnimateBottomCityState extends State<AdaptiveAnimateBottomCity>
     with SingleTickerProviderStateMixin {
   late Animation<double> animation;
   late AnimationController controller;
